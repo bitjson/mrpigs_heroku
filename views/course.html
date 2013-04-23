@@ -1,0 +1,31 @@
+<div class="floater {{showOrHide($index)}}" ng-repeat="slide in slides">
+
+    <a ng-click="backSlide()">back</a>
+    {{getCurrentSlide()}}
+    <a ng-click="forwardSlide()">forward</a>
+
+    <h1>{{slide.slideTitle}}</h1>
+
+    <p>{{slide.content}}</p>
+
+    <div></div>
+    <div ng-repeat="question in slide.questions">
+
+        <h3>{{question.prompt}}</h3>
+
+        <div ng-show="gotAnswerCorrect(question)" class="alert alert-success">
+            <strong>Correct! </strong>{{question.explanation}}
+        </div>
+        <div ng-show="gotAnswerWrong(question)" class="alert alert-error">{{wrongExplain}}</div>
+
+        <ul class="nav nav-tabs nav-stacked">
+            <li ng-repeat="choice in question.choices"><a ng-click="userPicks(question, choice)">{{choice}}</a></li>
+        </ul>
+    </div>
+    <a ng-show="canAdvance()" class="btn btn-block btn-success" ng-click="forwardSlide()">Continue</a>
+
+
+
+<br><br>
+    <a ng-click="test()" class="btn">console.log</a>
+</div>

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/03672ccc.main.css">
+    <link rel="stylesheet" href="styles/40b76da5.main.css">
   </head>
   <body ng-app="mrpigsApp">
     <!--[if lt IE 7]>
@@ -23,14 +23,24 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-inner" ng-controller="NavCtrl">
+                <a class="brand" href="#/"><img src="/images/c11cac5c.mrpigslogo.png" width="90px"></a>
+                <ul class="nav">
+                    <li ng-repeat="route in nav" ng-class="isActiveNav(route.href)"><a href="{{route.href}}">{{route.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div ng-view=""></div>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-cookies.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-sanitize.min.js"></script>
 
-    <script src="scripts/38bfd040.scripts.js"></script>
+    <script src="scripts/c2b8283c.scripts.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

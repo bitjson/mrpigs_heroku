@@ -1,15 +1,15 @@
 <div class="floater {{showOrHide($index)}}" ng-repeat="slide in slides">
 
-    <a ng-click="backSlide()">back</a>
+  <!--  <a ng-click="backSlide()" ng-show="canGoBack()">back</a>
     {{getCurrentSlide()}}
-    <a ng-click="forwardSlide()">forward</a>
+    <a ng-click="forwardSlide()">forward</a> -->
 
     <h1>{{slide.slideTitle}}</h1>
 
-    <p>{{slide.content}}</p>
+    <p ng-bind-html-unsafe="slide.content"></p>
 
-    <div></div>
-    <div ng-repeat="question in slide.questions">
+    <a class="btn btn-block btn-primary" ng-click="readyForQuestions = true;" ng-hide="readyForQuestions || canAdvance()">Continue</a>
+    <div ng-repeat="question in slide.questions" ng-show="readyForQuestions">
 
         <h3>{{question.prompt}}</h3>
 
@@ -23,5 +23,4 @@
         </ul>
     </div>
     <a ng-show="canAdvance()" class="btn btn-block btn-success" ng-click="forwardSlide()">Continue</a>
-
 </div>

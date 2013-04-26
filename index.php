@@ -6,11 +6,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>mrpigs | the monocled, Capitalist pig. </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/40b76da5.main.css">
+    <link rel="stylesheet" href="styles/c4c38922.main.css">
+    <link href="http://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet" type="text/css">
   </head>
   <body ng-app="mrpigsApp">
     <!--[if lt IE 7]>
@@ -33,6 +34,7 @@
             </div>
         </div>
         <div ng-view=""></div>
+        <small class="mrpigs-footer">(ɔ) 2013 - mrpigs is <a href="http://wiki.mises.org/wiki/Anarcho-capitalism">ancap</a> and doesn't believe in intellectual <em>property</em></small>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
@@ -40,11 +42,11 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-cookies.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-sanitize.min.js"></script>
 
-    <script src="scripts/c2b8283c.scripts.js"></script>
+    <script src="scripts/a4b9e3d7.scripts.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      var _gaq=[['_setAccount','UA-40362814-1'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
